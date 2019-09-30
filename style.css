@@ -1,0 +1,11 @@
+body {
+    text-align: center;
+}
+
+#RowinputError{
+    color: red;
+}
+
+#ColumninputError{
+    color: red;
+}

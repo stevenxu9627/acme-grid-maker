@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+      <h1>Acme Grid Maker</h1>
+
+      <div class='input'>
+        <input type='number' id='row-input' placeholder="num of row">
+        <p id='RowinputError'></p>
+        <input type='number' id='column-input' placeholder="num of column">
+        <p id='ColumninputError'></p>
+          <button>Make Grid</button>
+      </div>
+
+      <div id='gridcontainer'></div>
+      </div>
+
+      <div id='gridValue'>
+          <span>rIdx</span><span class='NumRow'></span>
+          <span>cIdx</span><span class='NumCol'></span>
+      </div>
+
+
+
+</body>
+  <script>
+      const grid=document.querySelector('#gridcontainer');
+      const row=document.querySelector('#row-input');
+      const NumRow=document.querySelector('.NumRow');
+      const RowinputError=document.querySelector('#RowinputError')
+      const column=document.querySelector('#column-input');
+      const NumCol=document.querySelector('.NumCol');
+      const ColumninputError=document.querySelector('#ColumninputError');
+      const button=document.querySelector('button');
+
+      button.addEventListener('click',()=>{
+          const rowValue= row.value;
+          const colValue= column.value;
+          if(rowValue>50 || (typeof rowValue !== "Number")){
+              return RowinputError.innerHTML = 'rows must be between 1 and 50';
+          }
+          if(colValue>50 || (typeof colValue !== "Number")){
+              return ColumninputError.innerHTML= 'columns must be between 1 and 50';
+          }
+        //   else {
+        //       for (let i)
+        //   }
+      })
+
+  </script>
+</html>
